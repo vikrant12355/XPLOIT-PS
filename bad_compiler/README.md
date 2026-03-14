@@ -20,10 +20,10 @@ deliverables:
 
 **Deliverables:**
 - `compiler.py` — Fixed, fully working compiler for `.wut` programs
-- `antigravity.wut` — Custom program showcasing loops, arithmetic, and printing team name "ANTIGRAVITY"
+- `circuits_labs.wut` — Custom program showcasing loops, arithmetic, and printing team name "Circuits Labs"
 - `WRITEUP.md` — Full documentation: bug analysis, fix explanation, and verification
 
 **How to run:**
 ```bash
-python compiler.py antigravity.wut
+python compiler.py circuits_labs.wut
 ```

@@ -21,7 +21,7 @@
 - Reverse-engineered the broken `.wut` compiler and identified 2 critical bugs:
   - `^` (print) was incorrectly popping the stack
   - `$` (swap/dup) was duplicating values instead of swapping
-- Built a working replacement compiler (`compiler.py`) and demo program (`antigravity.wut`)
+- Built a working replacement compiler (`compiler.py`) and demo program (`circuits_labs.wut`)
 - **See:** `bad_compiler/WRITEUP.md`
 
 ### 3. ✅ Vault Challenge (`vault_chal`)

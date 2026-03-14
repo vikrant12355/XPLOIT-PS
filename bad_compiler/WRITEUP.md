@@ -1,4 +1,4 @@
-# XPLOIT-PS: Bad Compiler Challenge Writeup
+# XPLOIT-PS: Bad Compiler Challenge Writeup — Team Circuits Labs
 
 ## 1. Initial Reconnaissance
 We started by examining the files provided:
@@ -48,21 +48,12 @@ The `$` handler (at `0x004024B2`) is intended to manipulate the stack, but the o
 Instead of hot-patching the messy `.exe` jump tables, we implemented a functionally perfect fixed compiler in Python (`compiler.py`). It reads the file, parses numbers correctly, handles loops with nested depth parsing, and applies the corrected `%`, `^`, and `$` semantics.
 
 ## 5. Writing a Custom `.wut` Program
-We created `antigravity.wut` to demonstrate deep understanding of the language, writing a program that outputs the team name `"Antigravity"` using loops and complex arithmetic.
+We created `circuits_labs.wut` to demonstrate deep understanding of the language, writing a program that outputs the team name `"Circuits Labs"` using loops and complex arithmetic.
 
 Structure logic snippet:
 ```wut
-~^                 (Push 65, print 'A')
-(3&$(15%$@*%^      (Loop: 65 + (3 * 15) = 110, print 'n')
-(6%^               (110 + 6 = 116, print 't')
-(11#%^             (116 - 11 = 105, print 'i')
-@@^                (Decrement twice = 103, print 'g')
-(11%^              (103 + 11 = 114, print 'r')
-(17#%^             (114 - 17 = 97, print 'a')
-(7&$(3%$@*%^       (Loop: 97 + (7 * 3) = 118, print 'v')
-(13#%^             (118 - 13 = 105, print 'i')
-(11%^              (105 + 11 = 116, print 't')
-(5%^               (116 + 5 = 121, print 'y')
-`                  (Clean up stack)
+~(2%^               (Push 67, print 'C')
+(101#%^             (Push ordinal diffs for next chars...)
 ```
+*(See circuits_labs.wut for full optimized code)*
 The code effectively uses nested loop components `(N&$(M%$@*%` for multiplication!
