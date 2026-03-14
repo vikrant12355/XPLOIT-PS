@@ -1,0 +1,30 @@
+# RESEARCH_LOG.md for the Dungeon Challenge is tracked separately
+# (in the artifacts directory).
+# This .gitignore entry keeps analysis scripts out of the submission.
+dungeon_challenge/*.py
+dungeon_challenge/*.txt
+dungeon_challenge/xploit.exe_extracted/
+dungeon_challenge/pyz_extracted/
+dungeon_challenge/base_lib_extracted/
+dungeon_challenge/pyc_strings.txt
+dungeon_challenge/xploit_*.pyc
+bad_compiler/analyze*.py
+bad_compiler/disasm*.py
+bad_compiler/disasm*.txt
+bad_compiler/iat_map.py
+bad_compiler/jt*.py
+bad_compiler/jumptable.py
+bad_compiler/main_*.txt
+bad_compiler/sim*.py
+bad_compiler/simulate.py
+bad_compiler/raw_main.py
+vault_chal/analyze_vault.py
+vault_chal/*.txt
+vault_chal/disasm_*.py
+vault_chal/dump_*.py
+vault_chal/find_strings.py
+vault_chal/get_plt.py
+vault_chal/list_symbols.py
+vault_chal/patch_chal.py
+vault_chal/.vault_state
+dooooom/extracted/
