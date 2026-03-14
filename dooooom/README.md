@@ -51,3 +51,28 @@ Better marks go to submissions where:
 - The recording shows a bot that actually feels like it belongs in the game
 
 ---
+
+## ✅ Our Solution — Team **Circuits Labs**
+
+**Approach:** Used DOOM's existing monster AI systems (`p_enemy.c`) rather than writing new code from scratch.
+
+**What We Built:**
+- `MF_FRIENDLY` flag added to `p_mobj.h` to tag ally entities
+- `A_CompanionChase()` in `p_enemy.c` — bot follows player and attacks enemies
+- `P_LookForEnemies()` helper — bot scans for nearby hostile targets
+- Modified `P_DamageMobj()` in `p_inter.c` — prevents friendly fire between player and bot
+- Auto-spawn in `P_SetupLevel()` in `p_setup.c` — bot appears at start of every level with **500 HP**
+
+**Key Files Modified:**
+
+| File | Change |
+|---|---|
+| `p_mobj.h` | Added `MF_FRIENDLY` flag |
+| `p_enemy.c` | Added `A_CompanionChase`, `P_LookForEnemies` |
+| `p_inter.c` | Friendly fire prevention |
+| `p_setup.c` | Auto-spawn companion at level start |
+| `info.c` / `info.h` | Registered companion bot states |
+
+**See:** `DOOM_WRITEUP.md` for full documentation.
+
+---

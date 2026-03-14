@@ -71,3 +71,19 @@ A screenshot showing `VAULT SYSTEM CLEARED` with the full terminal output visibl
 Screenshots, clear explanations, and evidence that you understood what you were reversing will always score higher than a working binary with poor documentation.
 
 ---
+
+## ✅ Our Solution — Team **Circuits Labs**
+
+**Approach:** Reverse-engineered the ELF binary using disassembly to understand the flow, then applied two minimal, targeted byte patches.
+
+**Bugs / Checks Bypassed:**
+
+1. **Authentication Module** — The auth function had a hardcoded compare that always resolved to a 'Guest' role. We patched the `main` entry to jump directly into the vault unlock sequence, bypassing the broken auth entirely.
+
+2. **Vault Unlock Conditional Jump** — The vault check used a `jne` (jump-if-not-equal) instruction after a `cmp`. We replaced the conditional jump bytes with `NOP`s so execution always falls through to the `VAULT SYSTEM CLEARED` path.
+
+**Deliverables:**
+- `chal` — The patched binary (produces `VAULT SYSTEM CLEARED`)
+- `VAULT_WRITEUP.md` — Full explanation of disassembly, patch offsets, before/after hex, and verification
+
+---

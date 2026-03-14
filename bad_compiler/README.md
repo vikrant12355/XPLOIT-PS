@@ -9,3 +9,21 @@ deliverables:
 1. fixed compiler 
 2. your new program
 3. thorough documentation of process
+
+---
+
+## ✅ Our Solution — Team **Circuits Labs**
+
+**Bugs Found:**
+1. `^` (print operator) incorrectly **popped** the top of the stack after printing, corrupting subsequent operations.
+2. `$` (swap/dup operator) **duplicated** the top value instead of properly swapping the top two values.
+
+**Deliverables:**
+- `compiler.py` — Fixed, fully working compiler for `.wut` programs
+- `antigravity.wut` — Custom program showcasing loops, arithmetic, and printing team name "ANTIGRAVITY"
+- `WRITEUP.md` — Full documentation: bug analysis, fix explanation, and verification
+
+**How to run:**
+```bash
+python compiler.py antigravity.wut
+```
